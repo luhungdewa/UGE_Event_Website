@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USC - UNESA Summer Camp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-detail {
+            background: linear-gradient(rgba(255, 102, 0, 0.7), rgba(255, 102, 0, 0.7)), url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1500');
+            background-size: cover; background-position: center; color: white; padding: 100px 0;
+        }
+        .gallery-img {
+            width: 100%; height: 250px; object-fit: cover; border-radius: 15px;
+            transition: 0.3s; cursor: pointer;
+        }
+        .gallery-img:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3); }
+        .section-title { font-weight: 700; color: #ff6600; margin-bottom: 30px; }
+        
+        /* Gaya Banner Flyer - Siku-siku (tanpa rounding) */
+        .flyer-banner {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .flyer-banner:hover { transform: scale(1.02); }
+
+        /* --- STYLING TIMELINE KOMPONEN BARU --- */
+        .timeline-container {
+            position: relative;
+            padding-left: 30px;
+            list-style: none;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #ff6600;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ff6600;
+            border: 3px solid #fff;
+        }
+        .timeline-date {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ff6600;
+            text-transform: uppercase;
+        }
+
+        /* Tombol Custom Siku-siku */
+        .btn-volunteer-usc {
+            background-color: #ff6600;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-volunteer-usc:hover {
+            background-color: #e05500;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+        }
+
+        footer { 
+            background: #001a33; 
+            color: white; 
+            padding: 60px 0 30px; 
+        }
+        .social-icon {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            color: #ffaa00;
+            transform: translateY(-5px);
+        }
+        
+        .border-orange { border-left: 5px solid #ff6600 !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                 <img src="Photo/UGE Logo.png" alt="Logo" style="height: 25px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="usc.html">USC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="icf.html">ICF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-detail text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">UNESA Summer Camp</h1>
+            <p class="lead">Empowering Global Knowledge & Cultural Immersion</p>
+        </div>
+    </header>
+
+    <section class="container my-5 py-4">
+        <div class="row align-items-center text-md-start text-center">
+            <div class="col-lg-6">
+                <h2 class="section-title">Tentang USC</h2>
+                <p>UNESA Summer Camp (USC) dirancang untuk memberikan pengalaman belajar yang unik bagi mahasiswa internasional. Program ini menggabungkan kursus akademik pendek dengan pengenalan mendalam terhadap budaya lokal Jawa Timur.</p>
+                <p>Mulai dari belajar Bahasa Indonesia (BIPA), workshop seni tradisional, hingga kunjungan ke situs bersejarah, USC adalah pintu gerbang untuk memahami Indonesia lebih dekat.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4 bg-light border-orange rounded shadow-sm text-start">
+                    <h4>Highlight Kegiatan:</h4>
+                    <ul class="mb-0">
+                        <li>Indonesian Language & Culture Classes</li>
+                        <li>Traditional Dance & Music Workshop</li>
+                        <li>Surabaya Heritage City Tour</li>
+                        <li>Eco-Tourism to Mt. Bromo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 py-5 bg-light rounded-0">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 text-center">
+                <h2 class="section-title mb-3">Upcoming Event: USC 2026</h2>
+                <p class="text-muted mb-4 px-md-4">Bersiaplah untuk menjadi bagian dari perhelatan akbar internasional UGE berikutnya. Kami membuka kesempatan emas bagi Anda untuk mengasah kemampuan global leadership dan memperluas jaringan internasional.</p>
+                <img src="Photo/flyer_usc.jpeg" class="flyer-banner img-fluid" alt="Official Flyer USC 2026" onerror="this.src='https://via.placeholder.com/450x600?text=Flyer+USC+2026'">
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4 bg-white shadow-sm border-start border-4 border-warning rounded-0">
+                    <h4 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-calendar-days me-2 text-warning"></i>Recruitment & Event Timeline</h4>
+                    <ul class="timeline-container">
+                        <li class="timeline-item">
+                            <div class="timeline-date">1 - 15 Juli 2026</div>
+                            <h5 class="fw-semibold mb-1">Open Registration Volunteer</h5>
+                            <p class="text-muted small">Pendaftaran terbuka bagi seluruh mahasiswa aktif Universitas Negeri Surabaya.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-date">18 - 20 Juli 2026</div>
+                            <h5 class="fw-semibold mb-1">Interview & Selection</h5>
+                            <p class="text-muted small">Tahap wawancara mendalam untuk menentukan pembagian divisi media, database, dan LO.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-date">1 Agustus 2026</div>
+                            <h5 class="fw-semibold mb-1">Announcement & Briefing</h5>
+                            <p class="text-muted small">Pengumuman resmi panitia volunteer terpilih dan koordinasi kerja awal.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-date">September 2026</div>
+                            <h5 class="fw-semibold mb-1">Event Execution (USC 2026)</h5>
+                            <p class="text-muted small">Pelaksanaan rangkaian puncak program penyambutan mahasiswa asing.</p>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4 pt-2 text-center text-lg-start">
+                        <a href="https://forms.gle/contohFormUSC2026" target="_blank" class="btn btn-volunteer-usc py-3 px-5 rounded-0 text-uppercase">
+                            <i class="fa-solid fa-paper-plane me-2"></i>Apply as Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="section-title text-center">Galeri Dokumentasi</h2>
+        <div class="row g-4" id="usc-gallery">
+            </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h4 class="fw-semibold mb-4">UNESA Global Engagement</h4>
+            <div class="mb-4">
+                <a href="https://www.instagram.com/uge.unesa" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i> <span>@uge.unesa</span>
+                </a>
+                <a href="https://www.tiktok.com/@uge.unesa" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i> <span>@uge.unesa</span>
+                </a>
+                <a href="https://oia.unesa.ac.id" target="_blank" class="social-icon">
+                    <i class="fas fa-globe"></i> <span>oia.unesa.ac.id</span>
+                </a>
+            </div>
+            <p class="small opacity-75 mb-0">&copy; 2026 UGE Event UNESA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const galleryContainer = document.getElementById('usc-gallery');
+        const totalPhotos = 21; 
+        for (let i = 1; i <= totalPhotos; i++) {
+            const col = document.createElement('div');
+            col.className = 'col-md-4 col-sm-6';
+            col.innerHTML = `
+                <div class="gallery-item">
+                    <img src="Photo/USC_${i}.jpg" class="gallery-img" loading="lazy" alt="USC Documentation ${i}" 
+                         onerror="this.src='https://via.placeholder.com/500x350?text=USC+Photo+${i}'">
+                </div>
+            `;
+            galleryContainer.appendChild(col);
+        }
+    </script>
+</body>
+</html>
